@@ -41,10 +41,10 @@ body{
   position: absolute;
       bottom: 54px;
       right: 12px;
-      width: 25%; /* Full width (cover the whole page) */
-      height: 45%; /* Full height (cover the whole page) */
-  background-color: rgba(255,255,255,0.5); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+      width: 25%;
+      height: 65%; 
+  background-color: rgba(255,255,255,0.5);
+  z-index: 2; /* floating stuff uses z-index 2*/
       border-radius: 6px;
       /* animation */
       animation-duration: 0.25s;
@@ -69,11 +69,11 @@ body{
     position: absolute;
     bottom: 54px;
     left: 12px;
-    width: 38%; /* Full width (cover the whole page) */
-    height: 75%; /* Full height (cover the whole page) */
-    display: none; /* Hidden by default */
-    background-color: rgba(255,255,255,0.5); /* Black background with opacity */
-    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    width: 38%; 
+    height: 75%; 
+    display: none; 
+    background-color: rgba(255,255,255,0.5); 
+    z-index: 2; 
     border-radius: 6px;
     /* animation */
     animation-duration: 0.25s;
@@ -145,11 +145,11 @@ body{
     position: absolute;
     bottom: 54px;
     left: 55px;
-    width: 50%; /* Full width (cover the whole page) */
-    height: 75%; /* Full height (cover the whole page) */
-    display: none; /* Hidden by default */
-    background-color: rgba(255,255,255,0.5); /* Black background with opacity */
-    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    width: 50%; 
+    height: 75%; 
+    display: none; 
+    background-color: rgba(255,255,255,0.5);
+    z-index: 2;
     border-radius: 6px;
     /* animation */
     animation-duration: 0.25s;
@@ -197,17 +197,22 @@ ul {
 ul li {
   cursor: pointer;
   position: relative;
-  padding: 12px 8px 12px 40px;
-  background: #eee;
-  font-size: 18px;
-  transition: 0.2s;
-
   /* make the list items unselectable */
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 16px;
+  transition: 0.2s;
+  animation-duration: 0.25s;
+  animation-name: listanimation;}
+  @keyframes listanimation{
+      from{bottom:50% ;opacity:0}
+      to{bottom:54px ;opacity:1}
+  }
+
 
 /* Set all odd list items to a different color (zebra-stripes) */
 ul li:nth-child(odd) {
