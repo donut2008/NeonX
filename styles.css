@@ -1,0 +1,134 @@
+body{
+  font-family: 'Segoe UI';
+}
+#calendaroverlay{
+  display: none;
+  position: absolute;
+      bottom: 54px;
+      right: 12px;
+      width: 25%; /* Full width (cover the whole page) */
+      height: 45%; /* Full height (cover the whole page) */
+  background-color: rgba(255,255,255,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+      border-radius: 6px;
+      /* animation */
+      animation-duration: 0.25s;
+      animation-name: launcheranimation;}
+      @keyframes launcheranimation{
+          from{bottom:0;opacity:0}
+          to{bottom:50px;opacity:1}
+      }
+.Taskbar {
+    position: fixed;
+    z-index: 3;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    width: 100%;
+    height: 42px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.7);
+ }
+ #launcher {
+    position: absolute;
+    bottom: 54px;
+    left: 12px;
+    width: 38%; /* Full width (cover the whole page) */
+    height: 75%; /* Full height (cover the whole page) */
+    display: none; /* Hidden by default */
+    background-color: rgba(255,255,255,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    border-radius: 6px;
+    /* animation */
+    animation-duration: 0.25s;
+    animation-name: launcheranimation;}
+    @keyframes launcheranimation{
+        from{bottom:0;opacity:0}
+        to{bottom:50px;opacity:1}
+    }
+  #closeoverlays {
+      position: fixed;
+      display: none;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+  }
+  #searchbox {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 5px;
+    left: 55px;
+  }
+  #search {
+    border: 0px;
+    border-radius: 4px 0 0 4px;
+    height: 30px;
+    width: 200px;
+    padding-left: 10px;
+  }
+    #launcherbutton {
+    display: flex;
+    position: absolute;
+    bottom: 6px;
+    left:12px;
+    border: 0px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;  
+  }
+  #microphone{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    border-radius: 0 4px 4px 0;
+    background-color: #0078D4;
+    border: 0;
+    width: 30px;
+  }
+  .launchericon{
+      width: 22px;
+      height: 22px;
+  }
+  #clockcontainer{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    bottom: 6px;
+    right: 12px;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 72px;
+    height: 30px;
+    border-radius: 4px;
+  }
+  #clock {
+      color: rgba(0, 0, 0, 0.5);
+  }
+  #searchoverlay {
+    position: absolute;
+    bottom: 54px;
+    left: 55px;
+    width: 50%; /* Full width (cover the whole page) */
+    height: 75%; /* Full height (cover the whole page) */
+    display: none; /* Hidden by default */
+    background-color: rgba(255,255,255,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    border-radius: 6px;
+    /* animation */
+    animation-duration: 0.25s;
+    animation-name: launcheranimation;}
+    @keyframes launcheranimation{
+        from{bottom:0;opacity:0}
+        to{bottom:50px;opacity:1}
+    }
+    h3{
+      font-weight: 600;
+      margin-left: 25px;
+    }
+    h5{
+      color: rgba(0, 0, 0, 0.5);
+    }
