@@ -2,7 +2,6 @@
 <html>
 <head>
 <title>Desktop</title>
-<script src="code.js"></script>
 <link rel="stylesheet" href="styles.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -12,20 +11,60 @@
   <h3>Recently used files</h3>
 </div>
 <div id=calendaroverlay>
-  <h3 id=longclock> Test</h3>
+  <h3 id=longclock> </h3>
   <h3 id=date style="color: rgba(0, 0, 0, 0.5); font-weight: normal;"> </h3>
+  <h3>To-Do</h3>
+  <div id="ToDo" class="todo_header">
+    <input type="text" id="myInput" placeholder="Create a new To-Do">
+    <span onclick="newElement()" class="addBtn" title="Add"><img src="assets/icons/add.svg"></span>
+  </div>
+  
+  <ul id="myUL">
+  </ul>
 </div>
 <div id=launcher>
-    <p>Launcher</p>
+    <h2>Apps</h2>
+    <ul>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+      <li>stuff</li>
+    </ul>
 </div>   
 <div class="Taskbar">
-  <button onclick="on()" id="launcherbutton"> <img class="launchericon" src="assets/icons/apps.svg"></button>
+  <button onclick="on()" id="launcherbutton"> <img src="assets/icons/apps.svg"></button>
   <div id=searchbox>
       <input onclick="searchoverlay()" type="text" placeholder="Type here to search" id="search">
-      <button id=microphone onclick="voicesearch()"><img class="micicon" src="assets/icons/microphone.svg"></button>
+      <button id=microphone onclick="voicesearch()"><img src="assets/icons/microphone.svg"></button>
   </div>
   <div id=clockcontainer onclick="calendaroverlay()"><div id=clock></div></div>
 </div>
-
+<script src="script.js"></script>
 </body>
 </html> 
