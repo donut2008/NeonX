@@ -1,2 +1,2 @@
-# alur2020.github.io
-Neon X
+# NeonX
+An operating system build upon web technologies
