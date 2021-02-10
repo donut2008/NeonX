@@ -37,6 +37,7 @@
 .windowheader > *{
   display: inline-block;
   width: auto;
+  cursor: move;
   height: 18px;
 }
 .minimize {
