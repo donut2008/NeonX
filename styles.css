@@ -1,4 +1,4 @@
-body{
+* {
   font-family: 'Segoe UI';
 }
 ::-webkit-scrollbar {
@@ -34,7 +34,115 @@ body{
 ::-webkit-scrollbar-corner {
   background: transparent;
 }
-
+.windowheader > *{
+  display: inline-block;
+  width: auto;
+  height: 18px;
+}
+.minimize {
+  width: 12px;
+  height: 3px;
+}
+.timedate > *{
+  display: inline-block;
+}
+.todo_headertext {
+  padding-top: 0px;
+  margin-top: 0px;
+}
+.semibold{
+  font-weight: 600;
+  padding-top: 0px;
+  margin-top: 10px;
+  margin-left: 12px;
+}
+.carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25px;
+}
+#searchcard {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  flex-direction: row;
+  background-color: rgb(255,255,255);
+  width: 200px;
+  height: 100px;
+  border-radius: 4px;
+  margin-left: 6px;
+  overflow-x: hidden;
+}
+#searchcard:hover{
+  transition-duration: 0.4s;
+  box-shadow: 0px 17px 30px 0px rgba(0, 0, 0, 0.14);
+}
+#searchlist{
+  border-radius: 6px;
+  border-width: 0 0 4px 0;
+  color:rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.3);
+}
+#searchlist:hover{
+  background-color: rgb(255, 255, 255);
+  border-width: 0;
+  transition-duration: 0.4s;
+  box-shadow: 0px 17px 30px 0px rgba(0, 0, 0, 0.14);
+  opacity: 1;
+}
+#taskbarappicon{
+  display: flex;
+  bottom: 6px;
+  margin-left:12px;
+  padding: 5px;
+  border: 0px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;  
+}
+#window{
+  display: none;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 0px 17px 30px 0px rgba(0, 0, 0, 0.14);
+  resize: both;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+      /* animation */
+      animation-duration: 0.25s;
+      animation-name: launcheranimation;}
+      @keyframes launcheranimation{
+          from{bottom:0;opacity:0}
+          to{bottom:50px;opacity:1}
+}
+#windowexceed{
+  display: none;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 0px 17px 30px 0px rgba(0, 0, 0, 0.14);
+  resize: both;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+      /* animation */
+      animation-duration: 0.25s;
+      animation-name: launcheranimation;}
+      @keyframes launcheranimation{
+          from{bottom:0;opacity:0}
+          to{bottom:50px;opacity:1}
+}
 #calendaroverlay{
   display: none;
   overflow-y: scroll;
@@ -64,6 +172,24 @@ body{
     border-radius: 4px;
     background-color: rgba(255, 255, 255, 0.7);
  }
+ .grid-container {
+  display: grid;
+  column-gap: 14px;
+  row-gap: 14px;
+  grid-template-columns: 90px 90px 90px 90px 90px;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.grid-item:hover {
+  transition-duration: 0.4s;
+  box-shadow: 0px 17px 30px 0px rgba(0, 0, 0, 0.14);
+}
  #launcher {
     overflow-y: scroll;
     position: absolute;
@@ -143,13 +269,16 @@ body{
   }
   #searchoverlay {
     position: absolute;
-    bottom: 54px;
-    left: 55px;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
     width: 50%; 
     height: 75%; 
     display: none; 
     background-color: rgba(255,255,255,0.5);
     z-index: 2;
+    overflow:hidden;
     border-radius: 6px;
     /* animation */
     animation-duration: 0.25s;
@@ -188,13 +317,13 @@ body{
 }
 
 /* Remove margins and padding from the list */
-ul {
+#myUL {
   margin: 0;
   padding: 0;
 }
 
 /* Style the list items */
-ul li {
+#myUL li {
   cursor: pointer;
   position: relative;
   /* make the list items unselectable */
@@ -203,7 +332,6 @@ ul li {
   -ms-user-select: none;
   user-select: none;
   padding: 12px 8px 12px 40px;
-  background: #eee;
   font-size: 16px;
   transition: 0.2s;
   animation-duration: 0.25s;
@@ -215,24 +343,24 @@ ul li {
 
 
 /* Set all odd list items to a different color (zebra-stripes) */
-ul li:nth-child(odd) {
+#myUL li:nth-child(odd) {
   background: #f9f9f9;
 }
 
 /* Darker background-color on hover */
-ul li:hover {
+#myUL li:hover {
   background: #ddd;
 }
 
 /* When clicked on, add a background color and strike out text */
-ul li.checked {
+#myUL li.checked {
   background: #888;
   color: #fff;
   text-decoration: line-through;
 }
 
 /* Add a "checked" mark when clicked on */
-ul li.checked::before {
+#myUL li.checked::before {
   content: '';
   position: absolute;
   border-color: #fff;
