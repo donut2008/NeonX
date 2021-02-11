@@ -1,9 +1,26 @@
+:root {
+  --accentcolor: #0085ff; 
+}
 @font-face {
   font-family: "Work Sans";
   src: url(assets/fonts/WorkSans.ttf);
 }
 * {
   font-family: 'Work Sans';
+}
+button{
+  padding: 5px 16px;
+  border: none;
+  color: rgba(0, 0, 0, 0.8);
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.1);
+}
+.accentbutton{
+  padding: 5px 16px;
+  background: var(--accentcolor);
+  border-radius: 2px;
+  border: none;
+  color: #ffffff;
 }
 ::-webkit-scrollbar {
   width: 5px;
@@ -110,6 +127,11 @@
   justify-content: center;
   align-items: center;  
 }
+#redaccent{
+  background-color:rgb(255, 0, 0);
+  width: 100px;
+  height: 100px;
+}
 #window{
   display: none;
   border-radius: 6px;
@@ -120,6 +142,7 @@
   top: 50%;
   left: 50%;
   margin-right: -50%;
+  z-index: 2;
   transform: translate(-50%, -50%);
   overflow: auto;
       /* animation */
@@ -304,7 +327,8 @@
         to{bottom:50px;opacity:1}
     }
     h1{
-      font-weight: 600;
+      font-weight: 500;
+      font-size: 48px;
       padding-left: 20px;
       font-size: 40pt;
     }
@@ -323,6 +347,12 @@
     }
     h5{
       color: rgba(0, 0, 0, 0.5);
+    }
+    h6{
+      font-size: 12px;
+      left: 5px;
+      padding: 0;
+      margin: 0;
     }
 
 
@@ -455,4 +485,59 @@
 
 .addBtn:hover {
   background-color: #3b9be6;
+}
+
+/* right click menu*/
+#menu {
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 2px;
+  box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.13);
+  position: fixed;
+  background: rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(8px);
+  color: #555;
+  font-size: 11px;
+  transition: opacity .1s ease-in-out;
+  padding: 0px;
+  border: 0px solid;
+}
+
+#menu a {
+  display: block;
+  color: #555;
+  text-decoration: none;
+  padding: 6px 8px 6px 30px;
+  width: 250px;
+  position: relative;
+}
+
+#menu a img {
+  height: 20px;
+  font-size: 17px;
+  width: 20px;
+  position: absolute;
+  left: 5px;
+  top: 2px;
+}
+
+#menu a span {
+  color: #BCB1B3;
+  float: right;
+}
+
+#menu a:hover {
+  color: #fff;
+  background: #0085ff;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 2px; 
+}
+#menu a span:hover {
+  color: #FFFFFF;
+}
+
+#menu hr {
+  border: 1px solid #EBEBEB;
+  border-bottom: 0;
 }
