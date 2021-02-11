@@ -7,7 +7,7 @@
 </head>
 <body style="background-image: url('assets/wallpaper.png'); background-size:cover;" onload="startTime(); longTime(); dateTime()">
 <div onclick="off()" id=closeoverlays></div>
-<div id=windowexceed>
+<div width=600px height=400px id=windowexceed>
   <div class=windowheader id=windowexceedheader>
     <img src="apps/Exceed/AppIcon.png" width="16" height="16">
     <p>Exceed</p>
@@ -85,10 +85,11 @@
     </div>
 </div>   
 <div class="Taskbar">
-  <button onclick="on()" id="launcherbutton"> <img src="assets/icons/apps.svg"></button>
+  <button onclick="on()" id="launcherbutton"> <img class=launchericon src="assets/icons/apps.svg"></button>
   <div id=searchbox>
+      <img width=16px height=16px src="assets/icons/search.svg" onclick="searchoverlay()">
       <input onclick="searchoverlay()" type="text" placeholder="Type here to search" id="search">
-      <button id=microphone onclick="voicesearch()"><img src="assets/icons/microphone.svg"></button>
+      <img width=16px height=16px src="assets/icons/microphone.svg" onclick="voicesearch()">
       <button onclick="openapp()" id=taskbarappicon> <img width=22px height=22px src="apps/Test app/AppIcon.png"></button>
   </div>
   <div id=clockcontainer onclick="calendaroverlay()"><div id=clock></div></div>
