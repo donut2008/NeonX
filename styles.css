@@ -2,11 +2,12 @@
   --accentcolor: #0085ff; 
 }
 @font-face {
-  font-family: "Work Sans";
-  src: url(assets/fonts/WorkSans.ttf);
+  font-family: "Bahnschrift";
+  src: url(assets/fonts/Bahnschrift.ttf);
 }
 * {
-  font-family: 'Work Sans';
+<<<<<<< Updated upstream
+  font-family: 'Bahnschrift';
 }
 button{
   padding: 5px 16px;
@@ -21,6 +22,9 @@ button{
   border-radius: 2px;
   border: none;
   color: #ffffff;
+=======
+  font-family: 'assets\bahnschrift.ttf';
+>>>>>>> Stashed changes
 }
 ::-webkit-scrollbar {
   width: 5px;
