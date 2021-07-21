@@ -3,7 +3,7 @@
 }
 @font-face {
   font-family: "Bahnschrift";
-  src: url(assets/fonts/bahnschrift.ttf);
+  src: url(assets\fonts\bahnschrift.ttf);
 }
 * {
 <<<<<<< Updated upstream
@@ -23,7 +23,7 @@ button{
   border: none;
   color: #ffffff;
 =======
-  font-family: 'assets/fonts/bahnschrift.ttf';
+  font-family: 'assets\fonts\bahnschrift.ttf';
 >>>>>>> Stashed changes
 }
 ::-webkit-scrollbar {
