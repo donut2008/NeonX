@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 * {
-  font-family: 'Bahnschrift';
+  font-family: 'Inter';
 }
 ::-webkit-scrollbar {
   width: 5px;
