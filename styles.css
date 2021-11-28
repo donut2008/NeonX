@@ -270,9 +270,9 @@
       color: rgba(0, 0, 0, 0.5);
   }
   #searchoverlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
     margin-right: -50%;
     transform: translate(-50%, -50%);
     width: 50%; 
